@@ -5,12 +5,19 @@
 	.under {
 		#mainContent {
 			padding-bottom: 50px;
+			&:before {
+				background-image: url(../images/und_main_bg_sp.jpg);
+			}
+
+			p {
+				line-height: 1.7;
+			}
 		}
 
 		.key {
 			margin-top: 0;
 			height: 350px;
-			background: url(../images/under_key_bg_sp.jpg) no-repeat top center / cover;
+			background: url(../images/und_key_sp.jpg) no-repeat center / cover;
 			.key_text {
 				padding: 10px;
 				padding-top: 60px;
@@ -41,6 +48,7 @@
 			}
 		}
 		h6 {
+			margin-top: 15px;
 			margin-bottom: 10px;
 			font-size: calc(var(--ttl_size) - 8px);
 		}
@@ -205,13 +213,21 @@
 		.tbl_note {
 			display: block;
 		}
+		ul li {
+			line-height: 1.7;
+		}
 
 		ul.list01 {
 			li {
 				font-size: 16px;
 
+
 				&::before {
 					//top: 0.7em;
+					width: 10px;
+					height: 10px;
+					top: 9px;
+
 				}
 			}
 			&.mcol-2 {

@@ -7,6 +7,7 @@
     /* Firefox                        */
     image-rendering: -o-crisp-edges;
     /* Opera                          */
+    image-rendering: -webkit-optimize-contrast;
     /* Chrome (and eventually Safari) */
     image-rendering: pixelated;
     /* Chrome */
@@ -55,6 +56,7 @@ body:not(.ovh) .menu_toggle .inside {
   overflow: hidden;
   opacity: 0;
   visibility: hidden;
+  -webkit-transition: all 0.3s linear;
   transition: all 0.3s linear;
 }
 .menu_toggle.active {
@@ -71,6 +73,7 @@ body:not(.ovh) .menu_toggle .inside {
 .menu_toggle .inside {
   -webkit-overflow-scrolling: touch;
   /* Lets it scroll lazy */
+  -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
   height: 100%;
   overflow: auto;
@@ -113,7 +116,8 @@ body:not(.ovh) .menu_toggle .inside {
   position: absolute;
   top: 47%;
   left: 10px;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   font-size: 12px;
   font-weight: normal;
 }
@@ -124,6 +128,7 @@ body:not(.ovh) .menu_toggle .inside {
   position: relative;
   margin: 0 auto 0px;
   cursor: pointer;
+  -webkit-transition: 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
 }
 #nav-icon span {
@@ -133,7 +138,9 @@ body:not(.ovh) .menu_toggle .inside {
   width: 100%;
   opacity: 1;
   left: 0;
-  transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  -webkit-transition: 0.25s ease-in-out;
   transition: 0.25s ease-in-out;
 }
 #nav-icon span:nth-child(1) {
@@ -156,10 +163,12 @@ body:not(.ovh) .menu_toggle .inside {
   left: 50%;
 }
 #nav-icon.open span:nth-child(2) {
-  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 #nav-icon.open span:nth-child(3) {
-  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 #nav-icon.open span:nth-child(4) {
   top: 11px;
@@ -176,6 +185,7 @@ body:not(.ovh) .menu_toggle .inside {
   right: 0;
   z-index: 10;
   cursor: pointer;
+  -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 @media only screen and (min-width: 769px) {
@@ -212,6 +222,7 @@ body:not(.ovh) .menu_toggle .inside {
     right: 1.25em;
     z-index: 10;
     cursor: pointer;
+    -webkit-transition: all 0.3s;
     transition: all 0.3s;
     border-radius: 50%;
     overflow: hidden;
@@ -337,6 +348,8 @@ General
     display: -moz-flex;
     display: -ms-flex;
     display: -o-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
   }
   .under .topic_path {
@@ -414,7 +427,9 @@ Header & Footer
   }
   .header_top {
     width: 100%;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     height: 60px;
     padding: 0 10px;
   }
@@ -549,10 +564,16 @@ Under
   .under #mainContent {
     padding-bottom: 50px;
   }
+  .under #mainContent:before {
+    background-image: url(../images/und_main_bg_sp.jpg);
+  }
+  .under #mainContent p {
+    line-height: 1.7;
+  }
   .under .key {
     margin-top: 0;
     height: 350px;
-    background: url(../images/under_key_bg_sp.jpg) no-repeat top center/cover;
+    background: url(../images/und_key_sp.jpg) no-repeat center/cover;
   }
   .under .key .key_text {
     padding: 10px;
@@ -582,6 +603,7 @@ Under
     left: -0.4em;
   }
   .under h6 {
+    margin-top: 15px;
     margin-bottom: 10px;
     font-size: calc(var(--ttl_size) - 8px);
   }
@@ -693,8 +715,16 @@ Under
   .under .tbl_note {
     display: block;
   }
+  .under ul li {
+    line-height: 1.7;
+  }
   .under ul.list01 li {
     font-size: 16px;
+  }
+  .under ul.list01 li::before {
+    width: 10px;
+    height: 10px;
+    top: 9px;
   }
   .under ul.list01.mcol-2 li {
     width: 100%;
@@ -751,7 +781,9 @@ Under
 @media only screen and (max-width: 425px) {
   .under .access_box_img01 .block:nth-child(even) .big,
   .under .access_box_img02 .block:nth-child(even) .big {
-    order: 0;
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
   }
   .under .access_box_img01 .block .big,
   .under .access_box_img01 .block .small,
@@ -788,3 +820,4 @@ Under
 *
 *
 */
+/*# sourceMappingURL=style_sp.css.map */
