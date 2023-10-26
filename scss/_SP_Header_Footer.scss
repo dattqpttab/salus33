@@ -1,0 +1,98 @@
+@media only screen and (max-width: 768px) {
+	header {
+		height: 60px;
+	}
+	.header_top {
+		width: 100%;
+		align-items: center;
+		height: 60px;
+		padding: 0 10px;
+		p {
+			margin-bottom: 0;
+		}
+		.logo {
+			padding: 0;
+			width: auto;
+			img {
+				max-height: 40px;
+			}
+		}
+	}
+}
+@media only screen and (max-width: 480px) {
+	.header_top .logo {
+		width: 75%;
+	}
+}
+
+//foter
+@media only screen and (max-width: 768px) {
+	footer {
+		background-size: auto 100%;
+		padding-top: 60px;
+		margin-bottom: 60px;
+		.inner {
+			max-width: 610px;
+		}
+		.ft_info {
+			width: 100%;
+			max-width: 100%;
+		}
+		.ft_logo {
+			margin: 0 auto;
+			width: 65%;
+		}
+		.ft_tel {
+			margin-bottom: 15px;
+		}
+		.ft_btn {
+			max-width: 300px;
+			margin: 0 auto 25px;
+			div {
+				max-width: 100%;
+				width: 100%;
+				&:last-child {
+					margin-top: 10px;
+				}
+			}
+			.shared_btn01,
+			.shared_btn02 {
+				width: 100%;
+			}
+			.shared_btn01 a,
+			.shared_btn02 a {
+				padding-top: 1.1111111111em;
+				padding-bottom: 1.1111111111em;
+			}
+			.shared_btn01 a {
+				background-position:
+					6% 50%,
+					94.6%;
+			}
+			.shared_btn02 a {
+				background-position:
+					36% 50%,
+					94.6%;
+			}
+		}
+		.copy {
+			margin-top: 60px;
+			padding: 15px 0;
+		}
+	}
+}
+@media only screen and (max-width: 480px) {
+	footer {
+		padding-top: 40px;
+		.ft_logo {
+			margin: 0 auto;
+			width: 80%;
+		}
+		.copy {
+			margin-top: 40px;
+		}
+		.ft_tel {
+			font-size: 12px;
+		}
+	}
+}
