@@ -221,8 +221,13 @@
 			li {
 				font-size: 16px;
 
+
 				&::before {
 					//top: 0.7em;
+					width: 10px;
+					height: 10px;
+					top: 9px;
+
 				}
 			}
 			&.mcol-2 {

@@ -239,7 +239,7 @@
 	h5 {
 		position: relative;
 		font-size: 1.625em;
-		color: #cf8a97;
+		color: #ff7da1;
 		margin-bottom: 0.8em;
 		padding-left: 1.26923em;
 
@@ -276,6 +276,8 @@
 	}
 }
 
+
+
 @media only screen and (min-width: 1440px) {
 	.under {
 		h2 {
@@ -288,6 +290,31 @@
 	}
 
 
+}
+
+.under {
+	.box_style01 {
+		position: relative;
+		z-index: 1;
+		padding: 24px 30px 24px 46px;
+		font-size: 10px;
+		background-color: white;
+		font-size: 10px;
+		&:before {
+			@include before;
+			right: -1.4em;
+			bottom: -3em;
+			z-index: -1;
+			width: 17em;
+			height: 17em;
+			background-image: url(../images/box_list02_ico.png);
+			background-repeat: no-repeat;
+			background-size: 16.4em auto;
+			background-position: center;
+
+
+		}
+	}
 }
 
 @media only screen and (max-width: 1000px) and (min-width: 769px) {}
@@ -516,6 +543,10 @@
 				}
 			}
 		}
+
+		.box_style01 {
+			padding: 20px 30px;
+		}
 	}
 }
 
@@ -693,8 +724,8 @@
 		li {
 			font-size: 18px;
 			position: relative;
-			padding-left: 1.72222222222em;
-			padding-bottom: 1.16666666667em;
+			padding-left: 1.72222em;
+			padding-bottom: 0.66667em;
 
 			&:last-child {
 				padding-bottom: 0;
@@ -703,12 +734,12 @@
 			&::before {
 				content: "";
 				position: absolute;
-				width: 0.77777777777em;
-				height: 0.77777777777em;
+				width: 12px;
+				height: 12px;
 				border-radius: 50%;
-				top: 0.38888888888em;
-				left: 0.11111111111em;
-				background-color: #f1acae;
+				top: 0.77778em;
+				left: 0.4444em;
+				background-color: #ff7da1;
 			}
 		}
 	}
@@ -723,8 +754,6 @@
 	}
 
 	ul.list02 {
-		background-color: #fff9f9;
-		border: 1px solid #f1acae;
 		padding: 3.875em 3.8125em;
 
 		&.mcol-2 {
@@ -758,8 +787,8 @@
 
 		li {
 			position: relative;
-			padding-left: 2.7222222222em;
-			padding-bottom: 0.95em;
+			padding-left: 2.15em;
+			padding-bottom: 0.9em;
 			letter-spacing: 0.2em;
 			line-height: 1.5;
 			font-size: 20px;
@@ -771,10 +800,10 @@
 			&::before {
 				content: "";
 				position: absolute;
-				top: 0.1em;
+				top: 0.2em;
 				left: 0.1em;
 				width: 1.6em;
-				height: 1em;
+				height: 1.1em;
 				background: url(../images/list02_ico.png) no-repeat center center/contain;
 			}
 		}
